@@ -1,0 +1,12 @@
+{
+  "name": "wasi-reactor-gc-counterexample",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Vladislav <vlad.lagunoff@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@bjorn3/browser_wasi_shim": "^0.2.15",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  }
+}

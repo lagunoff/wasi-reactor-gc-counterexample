@@ -1,0 +1,14 @@
+cabal-version: 2.4
+
+name: wasi-reactor-gc-counterexample
+version: 0.1.0.0
+build-type: Simple
+
+executable wasi-reactor-gc-counterexample
+  ghc-options:
+    -no-hs-main -optl-mexec-model=reactor -dlint -debug
+    -optl-Wl,--export=hs_init,--export=hs_init_with_sanity_checks,--export=perform_major_gc,--export=generate_garbage
+  main-is: wasi-reactor-gc-counterexample.hs
+  c-sources: lib.c
+  cc-options: -std=c99
+  build-depends: base
